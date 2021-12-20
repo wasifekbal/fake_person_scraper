@@ -2,20 +2,11 @@
 
 import requests
 from bs4 import BeautifulSoup as bf
-import pickle
 
 headers = {"User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0"}
 
 base_url = "https://www.fakepersongenerator.com"
 url = "https://www.fakepersongenerator.com/Index/generate/gender/male/age/25/state/CO/city/colorado+springs"
-
-# selections = {}
-# with open("selections.pkl","rb") as file:
-#     selections = pickle.load(file)
-
-# state_abbr = {}
-# with open("state_abbr.pkl","rb") as file:
-#     state_abbr = pickle.load(file)
 
 try:
     req = requests.get(url=base_url, headers=headers).text
